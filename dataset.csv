@@ -1,0 +1,111 @@
+﻿Nama PTN,Provinsi,Kategori,Jenjang,Jurusan,Daya Tampung,Peminat,Jalur,Rasio Peminat,Gaji
+Universitas Sumatera Utara,Sumatera Utara,IPA,S1,Kimia,40,256,SNBP,6.40,6500000
+Universitas Sumatera Utara,Sumatera Utara,IPA,S1,Fisika,40,132,SNBP,3.30,4500000
+Universitas Sumatera Utara,Sumatera Utara,IPA,S1,Biologi,40,286,SNBP,7.15,5000000
+Universitas Sumatera Utara,Sumatera Utara,IPA,S1,Manajemen Sumber Daya Perairan,25,294,SNBP,11.76,7500000
+Universitas Sumatera Utara,Sumatera Utara,IPA,D3,Metrologi dan Instrumentasi,34,11,SNBP,0.32,8500000
+Universitas Andalas,Sumatera Barat,IPA,S1,Peternakan,40,51,SNBT,1.28,5743823
+Universitas Andalas,Sumatera Barat,IPA,S1,Fisika,65,73,SNBT,1.12,4500000
+Universitas Andalas,Sumatera Barat,IPA,S1,Penyuluhan Pertanian,20,110,SNBT,5.50,5500000
+Universitas Sriwijaya,Sumatera Selatan,IPA,S1,Fisika,54,67,SNBT,1.24,4500000
+Universitas Sriwijaya,Sumatera Selatan,IPA,S1,Teknologi Hasil Perikanan,57,94,SNBT,1.65,4750000
+Universitas Sriwijaya,Sumatera Selatan,IPA,S1,Pendidikan Fisika,40,109,SNBT,2.73,3382500
+Universitas Sriwijaya,Sumatera Selatan,IPA,S1,Matematika,54,116,SNBT,2.15,5000000
+Universitas Sriwijaya,Sumatera Selatan,IPA,S1,Peternakan,57,117,SNBT,2.05,5743823
+Universitas Sriwijaya,Sumatera Selatan,IPA,S1,Pendidikan Kimia,40,127,SNBT,3.18,2800000
+Universitas Sriwijaya,Sumatera Selatan,IPA,S1,Biologi,54,181,SNBT,3.35,5000000
+Universitas Indonesia,Jawa Barat,IPA,S1,Fisika,42,225,SNBT,5.36,4500000
+Universitas Indonesia,Jawa Barat,IPA,S1,Teknik Biomedis,15,303,SNBT,20.20,9000000
+Universitas Indonesia,Jawa Barat,IPA,S1,Kimia,42,309,SNBT,7.36,6500000
+Universitas Indonesia,Jawa Barat,IPA,S1,Matematika,30,315,SNBT,10.50,5000000
+Universitas Indonesia,Jawa Barat,IPA,S1,Geofisika,26,315,SNBT,12.12,13332511
+Universitas Padjadjaran,Jawa Barat,IPA,S1,Fisika,33,185,SNBT,5.61,4500000
+Universitas Padjadjaran,Jawa Barat,IPA,S1,Geofisika,28,277,SNBT,9.89,13332511
+Universitas Padjadjaran,Jawa Barat,IPA,S1,Biologi,39,361,SNBT,9.26,5000000
+Universitas Padjadjaran,Jawa Barat,IPA,S1,Matematika,33,375,SNBT,11.36,5000000
+Universitas Padjadjaran,Jawa Barat,IPA,S1,Perikanan,66,393,SNBT,5.95,5007718
+Universitas Diponegoro,Jawa Tengah,IPA,S1,Fisika,63,147,SNBT,2.33,4500000
+Universitas Diponegoro,Jawa Tengah,IPA,S1,Biologi,63,312,SNBT,4.95,5000000
+Universitas Diponegoro,Jawa Tengah,IPA,S1,Matematika,66,320,SNBT,4.85,5000000
+Universitas Diponegoro,Jawa Tengah,IPA,S1,Kimia,63,345,SNBT,5.48,6500000
+Universitas Diponegoro,Jawa Tengah,IPA,S1,Oceanografi,53,345,SNBT,6.51,6500000
+Universitas Gadjah Mada,Yogyakarta,IPA,S1,Teknologi Hasil Perikanan,23,129,SNBT,5.61,4750000
+Universitas Gadjah Mada,Yogyakarta,IPA,S1,Fisika,21,151,SNBT,7.19,4500000
+Universitas Gadjah Mada,Yogyakarta,IPA,S1,Teknik Fisika,42,215,SNBT,5.12,9000000
+Universitas Gadjah Mada,Yogyakarta,IPA,S1,Geofisika,21,217,SNBT,10.33,13332511
+Universitas Gadjah Mada,Yogyakarta,IPA,S1,Akuakultur,23,228,SNBT,9.91,5000000
+Universitas Airlangga,Jawa Timur,IPA,S1,Akuakultur,38,68,SNBT,1.79,5000000
+Universitas Airlangga,Jawa Timur,IPA,S1,Fisika,32,79,SNBT,2.47,4500000
+Universitas Airlangga,Jawa Timur,IPA,S1,Matematika,40,123,SNBT,3.08,5000000
+Universitas Airlangga,Jawa Timur,IPA,S1,Biologi,36,194,SNBT,5.39,5000000
+Universitas Airlangga,Jawa Timur,IPA,S1,Kimia,36,213,SNBT,5.92,6500000
+Universitas Tanjungpura,Kalimantan Barat,IPA,S1,Fisika,28,9,SNBT,0.32,4500000
+Universitas Tanjungpura,Kalimantan Barat,IPA,S1,Geofisika,28,22,SNBT,0.79,13332511
+Universitas Tanjungpura,Kalimantan Barat,IPA,S1,Teknik Kelautan,24,25,SNBT,1.04,5700000
+Universitas Tanjungpura,Kalimantan Barat,IPA,S1,Teknik Kimia,25,31,SNBT,1.24,10000000
+Universitas Mulawarman,Kalimantan Timur,IPA,S1,Akuakultur,18,18,SNBP,1.00,5000000
+Universitas Mulawarman,Kalimantan Timur,IPA,S1,Fisika,11,9,SNBP,0.82,4500000
+Universitas Mulawarman,Kalimantan Timur,IPA,S1,Peternakan,16,40,SNBP,2.50,5743823
+Universitas Mulawarman,Kalimantan Timur,IPA,S1,Teknik Kimia,14,45,SNBP,3.21,10000000
+Universitas Mulawarman,Kalimantan Timur,IPA,S1,Teknologi Hasil Perikanan,18,8,SNBP,0.44,4750000
+Universitas Mulawarman,Kalimantan Timur,IPA,S1,Matematika,14,30,SNBP,2.14,5000000
+Universitas Lambung Mangkurat,Kalimantan Selatan,IPA,S1,Akuakultur,29,14,SNBT,0.48,5000000
+Universitas Lambung Mangkurat,Kalimantan Selatan,IPA,S1,Fisika,30,18,SNBT,0.60,4500000
+Universitas Lambung Mangkurat,Kalimantan Selatan,IPA,S1,Teknologi Hasil Perikanan,29,19,SNBT,0.66,4750000
+Universitas Lambung Mangkurat,Kalimantan Selatan,IPA,S1,Kimia,30,30,SNBT,1.00,6500000
+Universitas Lambung Mangkurat,Kalimantan Selatan,IPA,S1,Pendidikan Fisika,30,13,SNBT,0.43,3382500
+Universitas Pendidikan Ganesha,Bali,IPA,S1,Fisika,24,8,SNBP,0.33,4500000
+Universitas Pendidikan Ganesha,Bali,IPA,S1,Akuakultur,36,8,SNBP,0.22,5000000
+Universitas Pendidikan Ganesha,Bali,IPA,S1,Biologi,24,17,SNBP,0.71,5000000
+Universitas Pendidikan Ganesha,Bali,IPA,S1,Matematika,24,21,SNBP,0.88,5000000
+Universitas Pendidikan Ganesha,Bali,IPA,S1,Kimia,24,5,SNBP,0.21,6500000
+Universitas Udayana,Bali,IPA,S1,Fisika,30,27,SNBT,0.90,4500000
+Universitas Udayana,Bali,IPA,S1,Kimia,24,45,SNBT,1.88,6500000
+Universitas Udayana,Bali,IPA,S1,Matematika,33,55,SNBT,1.67,5000000
+Universitas Udayana,Bali,IPA,S1,Arsitektur Lanskap,12,39,SNBT,3.25,4375000
+Universitas Udayana,Bali,IPA,S1,Teknik Pertanian dan Biosistem,21,19,SNBT,0.90,6000000
+Universitas Mataram,NTB,IPA,S1,Fisika,30,21,SNBT,0.70,4500000
+Universitas Mataram,NTB,IPA,S1,Pendidikan Kimia,40,71,SNBT,1.78,2800000
+Universitas Mataram,NTB,IPA,S1,Pendidikan Fisika,40,45,SNBT,1.13,3382500
+Universitas Mataram,NTB,IPA,S1,Kimia,30,55,SNBT,1.83,6500000
+Universitas Mataram,NTB,IPA,S1,Matematika,30,93,SNBT,3.10,5000000
+Universitas Nusa Cendana,NTT,IPA,S1,Fisika,32,26,SNBT,0.81,4500000
+Universitas Nusa Cendana,NTT,IPA,S1,Kimia,41,45,SNBT,1.10,6500000
+Universitas Nusa Cendana,NTT,IPA,S1,Manajemen Sumber Daya Perairan,36,64,SNBT,1.78,7500000
+Universitas Nusa Cendana,NTT,IPA,S1,Pendidikan Teknik Bangunan,36,68,SNBT,1.89,6250000
+Universitas Nusa Cendana,NTT,IPA,S1,Matematika,50,68,SNBT,1.36,5000000
+Universitas Sam Ratulangi,Sulawesi Utara,IPA,S1,Pemanfaatan Sumber Daya Perikanan,38,4,SNBT,0.11,5007718
+Universitas Sam Ratulangi,Sulawesi Utara,IPA,S1,Proteksi Tanaman,30,5,SNBT,0.17,6000000
+Universitas Sam Ratulangi,Sulawesi Utara,IPA,S1,Agronomi,30,7,SNBT,0.23,5280000
+Universitas Sam Ratulangi,Sulawesi Utara,IPA,S1,Teknologi Hasil Perikanan,38,8,SNBT,0.21,4750000
+Universitas Sam Ratulangi,Sulawesi Utara,IPA,S1,Fisika,30,9,SNBT,0.30,4500000
+Universitas Tadulako,Sulawesi Tengah,IPA,S1,Pendidikan Fisika,45,42,SNBP,0.93,3382500
+Universitas Tadulako,Sulawesi Tengah,IPA,S1,Pendidikan Kimia,45,33,SNBP,0.73,2800000
+Universitas Tadulako,Sulawesi Tengah,IPA,S1,Fisika,20,11,SNBP,0.55,4500000
+Universitas Tadulako,Sulawesi Tengah,IPA,S1,Matematika,15,36,SNBP,2.40,5000000
+Universitas Tadulako,Sulawesi Tengah,IPA,S1,Kimia,26,29,SNBP,1.12,6500000
+Universitas Halu Oleo,Sulawesi Tenggara,IPA,S1,Teknologi Hasil Perikanan,12,5,SNBP,0.42,4750000
+Universitas Halu Oleo,Sulawesi Tenggara,IPA,S1,Ilmu Kelautan,18,11,SNBP,0.61,5000000
+Universitas Halu Oleo,Sulawesi Tenggara,IPA,S1,Proteksi Tanaman,18,11,SNBP,0.61,6000000
+Universitas Halu Oleo,Sulawesi Tenggara,IPA,S1,Manajemen Sumber Daya Perairan,18,12,SNBP,0.67,7500000
+Universitas Halu Oleo,Sulawesi Tenggara,IPA,S1,Oceanografi,18,12,SNBP,0.67,6500000
+Universitas Hasanuddin,Sulawesi Selatan,IPA,S1,Teknik Geodesi,36,0,SNBT,0.00,9500000
+Universitas Hasanuddin,Sulawesi Selatan,IPA,S1,Pemanfaatan Sumber Daya Perikanan,113,61,SNBT,0.54,5007718
+Universitas Hasanuddin,Sulawesi Selatan,IPA,S1,Akuakultur,113,64,SNBT,0.57,5000000
+Universitas Hasanuddin,Sulawesi Selatan,IPA,S1,Teknologi Hasil Perikanan,75,53,SNBT,0.71,4750000
+Universitas Hasanuddin,Sulawesi Selatan,IPA,S1,Proteksi Tanaman,82,60,SNBT,0.73,6000000
+Universitas Pattimura,Maluku,IPA,S1,Peternakan,9,0,SNBP,0.00,5743823
+Universitas Pattimura,Maluku,IPA,S1,Pengelolaan Hutan,6,1,SNBP,0.17,5455720
+Universitas Pattimura,Maluku,IPA,S1,Pendidikan Matematika,10,1,SNBP,0.10,5500000
+Universitas Pattimura,Maluku,IPA,S1,Penyuluhan Pertanian,9,2,SNBP,0.22,5500000
+Universitas Cenderawasih,Papua,IPA,S1,Fisika,18,1,SNBT,0.06,4500000
+Universitas Cenderawasih,Papua,IPA,S1,Kimia,18,2,SNBT,0.11,6500000
+Universitas Cenderawasih,Papua,IPA,S1,Matematika,18,3,SNBT,0.17,5000000
+Universitas Cenderawasih,Papua,IPA,S1,Pendidikan Fisika,45,3,SNBT,0.07,3382500
+Universitas Cenderawasih,Papua,IPA,S1,Pendidikan Kimia,45,4,SNBT,0.09,2800000
+Universitas Cenderawasih,Papua,IPA,S1,Ilmu Kelautan,18,6,SNBT,0.33,5000000
+Universitas Musamus,Papua Selatan,IPA,S1,Peternakan,18,2,SNBT,0.11,5743823
+Universitas Musamus,Papua Selatan,IPA,S1,Pendidikan Kimia,14,2,SNBT,0.14,2800000
+Universitas Musamus,Papua Selatan,IPA,S1,Agroteknologi,27,4,SNBT,0.15,8000000
+Universitas Musamus,Papua Selatan,IPA,S1,Pendidikan Matematika,14,4,SNBT,0.29,5500000
+Universitas Musamus,Papua Selatan,IPA,S1,Teknik Pertanian,23,5,SNBT,0.22,6000000

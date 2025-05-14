@@ -1,0 +1,6 @@
+matplotlib-venn
+matplotlib
+streamlit
+pandas
+plotly
+pydeck
