@@ -25,7 +25,12 @@ col2.metric(label="Jumlah Jurusan", value=df['Jurusan'].nunique())
 col3.metric(label="Daya Tampung", value=df['Daya Tampung'].sum())
 col4.metric(label="Peminat", value=df['Peminat'].sum())
 
-
+st.subheader("Statistik Deskriptif Data")
+st.write(df.describe())
+st.markdown("""**Penjelasan**:
+            
+**Rasio Peminat** menunjukkan perbandingan antara jumlah peminat dengan daya tampung. Nilai rata-ratanya adalah **2.63**, artinya secara umum, tiap kursi jurusan diincar oleh 2–3 orang. Oleh karena itu, **ambang batas 2.63** digunakan untuk menentukan jurusan "Sepi Peminat", karena berada tepat di nilai **rata-rata**, sehingga jurusan di bawah rata-rata ini dianggap sepi peminat secara statistik.
+""")
 st.subheader("Peta Persebaran Rasio Peminatan Jurusan SAINTEK Perguruan Tinggi Negri di Indonesia")
 provinsi_coords = {
     "Sumatera Utara": (2.1154, 99.5451),
@@ -103,10 +108,16 @@ st.pydeck_chart(
 
 st.divider()
 
-# Top 10 Perguruan Tinggi Negri dengan Daya Tampung Tertinggi
-st.subheader("Top 10 Perguruan Tinggi Negeri dengan Daya Tampung Terbanyak")
-top_ptn_daya_tampung = df.groupby('Nama PTN')['Daya Tampung'].sum().reset_index()
-top_ptn_daya_tampung = top_ptn_daya_tampung.sort_values(by='Daya Tampung', ascending=False).head(10)
+# Top 10 Perguruan Tinggi Negri dengan Daya Tampung Tertinggi/Terendah
+daya_tampung = st.selectbox("Pilih Filter:", ("Tertinggi", "Terenah"))
+if daya_tampung == "Tertinggi":
+    st.subheader("Top 10 Perguruan Tinggi Negeri dengan Daya Tampung Tertinggi")
+    top_ptn_daya_tampung = df.groupby('Nama PTN')['Daya Tampung'].sum().reset_index()
+    top_ptn_daya_tampung = top_ptn_daya_tampung.sort_values(by='Daya Tampung', ascending=False).head(10)
+else:
+    st.subheader("Top 10 Perguruan Tinggi Negeri dengan Daya Tampung Terendah")
+    top_ptn_daya_tampung = df.groupby('Nama PTN')['Daya Tampung'].sum().reset_index()
+    top_ptn_daya_tampung = top_ptn_daya_tampung.sort_values(by='Daya Tampung', ascending=True).head(10)
 
 fig = px.bar(
     top_ptn_daya_tampung,
@@ -125,17 +136,35 @@ fig.update_layout(
 
 st.plotly_chart(fig)
 
+if daya_tampung == "Tertinggi":
+    st.markdown(f"""**Insight**
+- Perguruan Tinggi Negeri dengan daya tampung tertinggi adalah **{top_ptn_daya_tampung.iloc[0]['Nama PTN']}** dengan daya tampung **{top_ptn_daya_tampung.iloc[0]['Daya Tampung']}**.
+- Daya tampung tertinggi kedua adalah **{top_ptn_daya_tampung.iloc[1]['Nama PTN']}** dengan daya tampung **{top_ptn_daya_tampung.iloc[1]['Daya Tampung']}**.
+- Daya tampung tertinggi ketiga adalah **{top_ptn_daya_tampung.iloc[2]['Nama PTN']}** dengan daya tampung **{top_ptn_daya_tampung.iloc[2]['Daya Tampung']}**.
+""")
+else:
+    st.markdown(f"""**Insight**
+- Perguruan Tinggi Negeri dengan daya tampung terendah adalah **{top_ptn_daya_tampung.iloc[0]['Nama PTN']}** dengan daya tampung **{top_ptn_daya_tampung.iloc[0]['Daya Tampung']}**.
+- Daya tampung terendah kedua adalah **{top_ptn_daya_tampung.iloc[1]['Nama PTN']}** dengan daya tampung **{top_ptn_daya_tampung.iloc[1]['Daya Tampung']}**.
+- Daya tampung terendah ketiga adalah **{top_ptn_daya_tampung.iloc[2]['Nama PTN']}** dengan daya tampung **{top_ptn_daya_tampung.iloc[2]['Daya Tampung']}**.
+""")
 
+st.divider()
 
-# Top 10 Sepi Peminat
-st.subheader("Top 10 Jurusan di Perguruan Tinggi Negeri Sepi Peminat")
-
-top_10_sepi_peminat = df.sort_values(by='Rasio Peminat', ascending=True).head(10)
-top_10_sepi_peminat['Jurusan_PT'] = top_10_sepi_peminat['Jurusan'] + " - " + top_10_sepi_peminat['Nama PTN']
+# Top 10 Sepi Peminat/Rame Peminat
+peminat = st.selectbox("Pilih Filter:", ("Sepi Peminat", "Rame Peminat"))
+if peminat == "Sepi Peminat":
+    st.subheader("Top 10 Jurusan di Perguruan Tinggi Negeri Sepi Pemininat")
+    top_10_peminat = df.sort_values(by='Rasio Peminat', ascending=True).head(10)
+    top_10_peminat['Jurusan_PT'] = top_10_peminat['Jurusan'] + " - " + top_10_peminat['Nama PTN']
+else:
+    st.subheader("Top 10 Jurusan di Perguruan Tinggi Negeri Rame Peminat")
+    top_10_peminat = df.sort_values(by='Rasio Peminat', ascending=False).head(10)
+    top_10_peminat['Jurusan_PT'] = top_10_peminat['Jurusan'] + " - " + top_10_peminat['Nama PTN']
 
 # Plot
 fig = px.bar(
-    top_10_sepi_peminat,
+    top_10_peminat,
     x='Jurusan_PT',
     y='Rasio Peminat',
     hover_data=['Jurusan', 'Nama PTN', 'Rasio Peminat'],
@@ -150,10 +179,28 @@ fig.update_layout(
 
 st.plotly_chart(fig)
 
+if peminat == "Sepi Peminat":
+    st.markdown(f"""**Insight**
+- Jurusan dengan rasio peminat terendah adalah **{top_10_peminat.iloc[0]['Jurusan_PT']}** dengan rasio peminat **{top_10_peminat.iloc[0]['Rasio Peminat']}**.
+- Jurusan dengan rasio peminat terendah kedua adalah **{top_10_peminat.iloc[1]['Jurusan_PT']}** dengan rasio peminat **{top_10_peminat.iloc[1]['Rasio Peminat']}**.
+- Jurusan dengan rasio peminat terendah ketiga adalah **{top_10_peminat.iloc[2]['Jurusan_PT']}** dengan rasio peminat **{top_10_peminat.iloc[2]['Rasio Peminat']}**.
+""")
+else:
+    st.markdown(f"""**Insight**
+- Jurusan dengan rasio peminat tertinggi adalah **{top_10_peminat.iloc[0]['Jurusan_PT']}** dengan rasio peminat **{top_10_peminat.iloc[0]['Rasio Peminat']}**.
+- Jurusan dengan rasio peminat tertinggi kedua adalah **{top_10_peminat.iloc[1]['Jurusan_PT']}** dengan rasio peminat **{top_10_peminat.iloc[1]['Rasio Peminat']}**.
+- Jurusan dengan rasio peminat tertinggi ketiga adalah **{top_10_peminat.iloc[2]['Jurusan_PT']}** dengan rasio peminat **{top_10_peminat.iloc[2]['Rasio Peminat']}**.
+""")
+
+st.divider()
+
 # Top 10 Jurusan dengan Prospek Kerja Baik berdasarkan Gaji
 st.subheader("Top 10 Jurusan dengan Prospek Kerja Baik berdasarkan Rata-rata Gaji")
 top_10_gaji = df.groupby('Jurusan')['Gaji'].mean().reset_index()
 top_10_gaji = top_10_gaji.sort_values(by='Gaji', ascending=False).head(10)
+prospek_kerja_baik = df.groupby('Jurusan')['Gaji'].mean().reset_index()
+prospek_kerja_baik = prospek_kerja_baik.sort_values(by='Gaji', ascending=False)
+prospek_kerja_baik = prospek_kerja_baik[prospek_kerja_baik['Gaji'] >= 3100000]
 
 fig = px.bar(
     top_10_gaji,
@@ -171,27 +218,53 @@ fig.update_layout(
 
 st.plotly_chart(fig)
 
+st.markdown(f"""**Insight**
+- Berdasarkan data dari Badan Pusat Statistik (BPS) tahun 2025, rata-rata gaji di Indonesia adalah **Rp 3.100.000**. Oleh karena itu, jurusan dengan gaji di atas rata-rata adalah dianggap memiliki prospek kerja yang baik. Sumber: [BPS](https://www.bps.go.id/id/statistics-table/2/MTUyMSMy/rata-rata-upah-gaji.html).
+- Jurusan dengan rata-rata gaji tertinggi adalah **{top_10_gaji.iloc[0]['Jurusan']}** dengan rata-rata gaji **Rp {"{:,.2f}".format(top_10_gaji.iloc[0]['Gaji']).replace(",", "X").replace(".", ",").replace("X", ".")}**.
+- Jurusan dengan rata-rata gaji tertinggi kedua adalah **{top_10_gaji.iloc[1]['Jurusan']}** dengan rata-rata gaji **Rp {"{:,.2f}".format(top_10_gaji.iloc[1]['Gaji']).replace(",", "X").replace(".", ",").replace("X", ".")}**.
+- Jurusan dengan rata-rata gaji tertinggi ketiga adalah **{top_10_gaji.iloc[2]['Jurusan']}** dengan rata-rata gaji **Rp {"{:,.2f}".format(top_10_gaji.iloc[2]['Gaji']).replace(",", "X").replace(".", ",").replace("X", ".")}**.
+""")
+
+st.divider()
+
+# Venn Diagram
 st.subheader("Venn Diagram Jurusan Sepi Peminat dan Prospek Kerja Baik")
+
+# Bersihkan baris yang memiliki NaN di Jurusan atau Nama PTN
+df_clean = df.dropna(subset=['Jurusan', 'Nama PTN'])
+
 # Set A: Rasio Peminat ≤ 2.63
-set_rasio = set(df[df['Rasio Peminat'] <= 2.63]['Jurusan'] + " - " + df['Nama PTN'])
+set_rasio = set(
+    df_clean[df_clean['Rasio Peminat'] <= 2.63]
+    .apply(lambda row: f"{row['Jurusan']} - {row['Nama PTN']}", axis=1)
+)
 
 # Set B: Gaji ≥ 3.100.000
-set_gaji = set(df[df['Gaji'] >= 3100000]['Jurusan'] + " - " + df['Nama PTN'])
+set_gaji = set(
+    df_clean[df_clean['Gaji'] >= 3100000]
+    .apply(lambda row: f"{row['Jurusan']} - {row['Nama PTN']}", axis=1)
+)
 
 # Hitung irisan dan buat plot
-plt.figure(figsize=(6,6))
+plt.figure(figsize=(6, 6))
 venn2([set_rasio, set_gaji], set_labels=('Jurusan Sepi Peminat', 'Prospek Kerja Baik'))
 
 # Tampilkan di Streamlit
 st.pyplot(plt)
 
+# Pilihan analisis kombinasi
 choice = st.selectbox(
     "Melihat Detail Jurusan:",
-    ("Sepi Peminat Prospek Kerja Tidak Baik", "Sepi Peminat Prospek Kerja Baik", "Rame Peminat Prospek Kerja Baik")
+    (
+        "Sepi Peminat Prospek Kerja Tidak Baik",
+        "Sepi Peminat Prospek Kerja Baik",
+        "Rame Peminat Prospek Kerja Baik"
+    )
 )
+
+# Fungsi tampilkan set ke tabel
 def show_set_as_table(set_data, title="Hasil"):
     if set_data:
-        # Pastikan semua elemen adalah string
         cleaned = [str(item) for item in set_data]
         df_result = pd.DataFrame(sorted(cleaned), columns=["Jurusan - PTN"])
         st.subheader(title)
@@ -199,9 +272,16 @@ def show_set_as_table(set_data, title="Hasil"):
     else:
         st.info("Tidak ada jurusan yang memenuhi kriteria.")
 
+# Logika pilihan
 if choice == "Sepi Peminat Prospek Kerja Tidak Baik":
     show_set_as_table(set_rasio - set_gaji, "Sepi Peminat & Prospek Kerja Tidak Baik")
 elif choice == "Sepi Peminat Prospek Kerja Baik":
     show_set_as_table(set_rasio & set_gaji, "Sepi Peminat & Prospek Kerja Baik")
 elif choice == "Rame Peminat Prospek Kerja Baik":
     show_set_as_table(set_gaji - set_rasio, "Rame Peminat & Prospek Kerja Baik")
+
+st.markdown("""**Insight**
+- Jurusan yang sepi peminat dan memiliki prospek kerja baik adalah jurusan yang memiliki rasio peminat di bawah **2.63** dan gaji di atas **Rp 3.100.000**. Pada diagram Venn, area irisan antara dua lingkaran menunjukkan jurusan yang memenuhi kedua kriteria tersebut dengan total 73 Jurusan.
+- Jurusan yang sepi peminat dan memiliki prospek kerja tidak baik adalah jurusan yang memiliki rasio peminat di bawah **2.63** dan gaji di bawah **Rp 3.100.000**. Pada diagram Venn, area luar lingkaran kiri menunjukkan jurusan yang memenuhi kedua kriteria tersebut dengan total 4 Jurusan.
+- Jurusan yang rame peminat dan memiliki prospek kerja baik adalah jurusan yang memiliki rasio peminat di atas **2.63** dan gaji di atas **Rp 3.100.000**. Pada diagram Venn, area luar lingkaran kanan menunjukkan jurusan yang memenuhi kedua kriteria tersebut dengan total 32 Jurusan.
+""")
