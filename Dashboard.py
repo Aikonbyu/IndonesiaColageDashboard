@@ -109,7 +109,7 @@ st.pydeck_chart(
 st.divider()
 
 # Top 10 Perguruan Tinggi Negri dengan Daya Tampung Tertinggi/Terendah
-daya_tampung = st.selectbox("Pilih Filter:", ("Tertinggi", "Terenah"))
+daya_tampung = st.selectbox("Pilih Filter:", ("Tertinggi", "Terendah"))
 if daya_tampung == "Tertinggi":
     st.subheader("Top 10 Perguruan Tinggi Negeri dengan Daya Tampung Tertinggi")
     top_ptn_daya_tampung = df.groupby('Nama PTN')['Daya Tampung'].sum().reset_index()
