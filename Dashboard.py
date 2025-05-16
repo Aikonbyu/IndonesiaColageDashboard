@@ -256,7 +256,7 @@ st.pyplot(plt)
 choice = st.selectbox(
     "Melihat Detail Jurusan:",
     (
-        "Sepi Peminat Prospek Kerja Tidak Baik",
+        "Sepi Peminat Prospek Kerja Kurang Baik",
         "Sepi Peminat Prospek Kerja Baik",
         "Rame Peminat Prospek Kerja Baik"
     )
@@ -273,8 +273,8 @@ def show_set_as_table(set_data, title="Hasil"):
         st.info("Tidak ada jurusan yang memenuhi kriteria.")
 
 # Logika pilihan
-if choice == "Sepi Peminat Prospek Kerja Tidak Baik":
-    show_set_as_table(set_rasio - set_gaji, "Sepi Peminat & Prospek Kerja Tidak Baik")
+if choice == "Sepi Peminat Prospek Kerja Kurang Baik":
+    show_set_as_table(set_rasio - set_gaji, "Sepi Peminat & Prospek Kerja Kurang Baik")
 elif choice == "Sepi Peminat Prospek Kerja Baik":
     show_set_as_table(set_rasio & set_gaji, "Sepi Peminat & Prospek Kerja Baik")
 elif choice == "Rame Peminat Prospek Kerja Baik":
@@ -282,6 +282,6 @@ elif choice == "Rame Peminat Prospek Kerja Baik":
 
 st.markdown("""**Insight**
 - Jurusan yang sepi peminat dan memiliki prospek kerja baik adalah jurusan yang memiliki rasio peminat di bawah **2.63** dan gaji di atas **Rp 3.100.000**. Pada diagram Venn, area irisan antara dua lingkaran menunjukkan jurusan yang memenuhi kedua kriteria tersebut dengan total 73 Jurusan.
-- Jurusan yang sepi peminat dan memiliki prospek kerja tidak baik adalah jurusan yang memiliki rasio peminat di bawah **2.63** dan gaji di bawah **Rp 3.100.000**. Pada diagram Venn, area luar lingkaran kiri menunjukkan jurusan yang memenuhi kedua kriteria tersebut dengan total 4 Jurusan.
+- Jurusan yang sepi peminat dan memiliki prospek kerja kurang baik adalah jurusan yang memiliki rasio peminat di bawah **2.63** dan gaji di bawah **Rp 3.100.000**. Pada diagram Venn, area luar lingkaran kiri menunjukkan jurusan yang memenuhi kedua kriteria tersebut dengan total 4 Jurusan.
 - Jurusan yang rame peminat dan memiliki prospek kerja baik adalah jurusan yang memiliki rasio peminat di atas **2.63** dan gaji di atas **Rp 3.100.000**. Pada diagram Venn, area luar lingkaran kanan menunjukkan jurusan yang memenuhi kedua kriteria tersebut dengan total 32 Jurusan.
 """)
